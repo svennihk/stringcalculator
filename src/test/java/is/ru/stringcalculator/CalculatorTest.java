@@ -28,5 +28,10 @@ public class CalculatorTest {
     public void testMultipleNumbers(){
     	assertEquals(6, Calculator.add("1,2,3"));
     }
+    @Test
+    public void testUnknownNumber(){
+    	
+    	assertEquals(30,Calculator.add("2,3,10,5,7,3"));
+    }
 
 }
