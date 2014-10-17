@@ -34,4 +34,9 @@ public class CalculatorTest {
     	assertEquals(30,Calculator.add("2,3,10,5,7,3"));
     }
 
+    @Test
+    public void testNewLine(){
+    	assertEquals(19,Calculator.add("7\n4,8"));
+    }
+
 }

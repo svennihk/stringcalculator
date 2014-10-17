@@ -1,17 +1,17 @@
 package is.ru.stringcalculator;
 
-public class Calculator {
 
+public class Calculator {
+		
 	public static int add(String text){
 	
 		if(text.equals("")){
 			return 0;
+	}
+		else{
+			String[] SPLITER = splitNumbers(text);
+			return sum(SPLITER);
 		}
-		else if(text.contains(",")){
-			return sum(splitNumbers(text));
-		}
-		else
-			return 1;
 	
 	}
 
@@ -20,7 +20,11 @@ public class Calculator {
 	}
 
 	private static String[] splitNumbers(String numbers){
-	    return numbers.split(",");
+	  
+	  
+	 String [] SPLITER = numbers.split(",|\n");
+	 return SPLITER;
+  
 	}
       
     private static int sum(String[] numbers){
