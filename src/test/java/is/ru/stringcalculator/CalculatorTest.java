@@ -40,12 +40,15 @@ public class CalculatorTest {
     }
     @Test
     public void testHandelDertimineter(){
-    	assertEquals(3,Calculator.add("//;\n1;2"));
+    	assertEquals(14,Calculator.add("//;\n6;8"));
     }
     //@Test
   	 public void testNegative(){
     	assertEquals("Negatives not allowed: -4,-5",Calculator.add("2,-4,3,-5"));
-    	
+    }
+    @Test
+    public void testBiggerThen1000(){
+        assertEquals(2, Calculator.add("1001,2"));
     }
 
 }
